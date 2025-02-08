@@ -1,0 +1,40 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+void selectionSort(vector<int> &v){
+    int n = v.size();
+
+        for(int i = 0; i<n-1; i++){
+            int min_num = i;
+           for(int j = i+1; j < n; j++){
+                if(v[j]<v[min_num]){
+                    min_num = j;
+                }
+        }
+        if(i != min_num){
+            swap(v[i],v[min_num]);
+        }
+    }
+    return;
+}
+
+
+int main(){
+    int n;
+    cout<<"give size of arr";
+    cin>>n;
+    vector<int> v(n);
+
+    for(int i = 0; i < n;i++){
+        cin>>v[i];
+    }
+
+    selectionSort(v);
+
+    for(int i = 0; i<n; i++){
+        cout<<v[i]<<" ";
+    }cout<<endl;
+
+}
