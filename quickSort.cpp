@@ -3,10 +3,10 @@ using namespace std;
 
 int partition(int arr[], int first , int last){
         int pivot = arr[last]; 
-        int i = first - 1;// for inserting elements < pivot
-        int j = first; // for finding elements < pivot
+        int i = first - 1;// For inserting elements < pivot
+        int j = first; // For finding elements < pivot
 
-        for(;j < last; j++){
+        for (; j < last; j++){
             if(arr[j] < pivot){
                 i++;
                 swap(arr[i], arr[j]);
